@@ -1,0 +1,77 @@
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop()
+{
+  // Name: "RAZIT"
+  // (.-.) (.-)(--..)(..)(-)
+  blinkR();
+  blinkA();
+  blinkZ();
+  blinkI();
+  blinkT();
+
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(5000);
+}
+
+void dash()
+{
+  digitalWrite(LED_BUILTIN,HIGH);
+  delay(1000);
+  digitalWrite(LED_BUILTIN,LOW);
+  delay(500);
+}
+
+void dot()
+{
+  digitalWrite(LED_BUILTIN,HIGH);
+  delay(300);
+  digitalWrite(LED_BUILTIN,LOW);
+  delay(500);
+}
+
+void blinkR()
+{
+  // (.-.)
+  dot();
+  dash();
+  dot();
+  delay(1500); // delay between each letter
+}
+
+void blinkA()
+{
+  //(.-)
+  dot();
+  dash();
+  delay(1500); //delay between each letter
+}
+
+void blinkZ()
+{
+  //(--..)
+  dash();
+  dash();
+  dot();
+  dot();
+  delay(1500); //delay between each letter
+}
+
+void blinkI()
+{
+  //(..)
+  dot();
+  dot();
+  delay(1500); //delay between each letter
+}
+
+void blinkT()
+{
+  //(-)
+  dash();
+  delay(1500); //delay between each letter
+}
